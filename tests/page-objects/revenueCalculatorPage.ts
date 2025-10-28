@@ -42,12 +42,10 @@ export class RevenueCalculatorPage {
         await expect(this.page.locator('table.TableApp tbody tr').nth(1).locator('td').nth(1)).toHaveText('Yes');
         await expect(this.page.locator('table.TableApp tbody tr').nth(2).locator('td').nth(0)).toHaveText('Purchase price or value');
         const purchasePrice = await this.page.locator('table.TableApp tbody tr').nth(2).locator('td').nth(1).textContent().then((textContent) => textContent?.replace(/,/g, ''));
-        console.log('Purchase Price Value: ' + purchasePrice);
         await expect(purchasePrice).toContain('$' + purchase_price + '.00');
         await expect(this.page.locator('table.TableApp td.focus.bold').last()).toHaveText('Result:');
         await expect(this.page.locator('table.TableApp tbody tr').nth(4).locator('td').nth(0)).toHaveText('Duty payable');
         const dutyPayable = await this.page.locator('table.TableApp tbody tr').nth(4).locator('td').nth(1).textContent().then((textContent) => textContent?.replace(/,/g, ''));
-        console.log('Duty Payable Value: ' + dutyPayable);
         await expect(dutyPayable).toContain('$' + duty_payable + '.00');
         await expect(this.page.locator('div.modal-body p').first()).toHaveText('Note: All amounts are in Australian dollars. ');
         await expect(this.page.locator('div.modal-body p').last()).toHaveText('If you need help using this calculator, contact us.');
