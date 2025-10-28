@@ -3,9 +3,6 @@ import { HomePage } from './page-objects/homepage';
 import { RevenueCalculatorPage } from './page-objects/revenueCalculatorPage';
 import { config } from './config/config';
 
-const { chromium } = require('playwright'); 
-
-
   
 test('Vehicle Registration Calculation', async({ page }) => {
     const homePage = new HomePage(page);
