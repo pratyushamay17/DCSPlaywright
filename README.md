@@ -1,44 +1,40 @@
 # NSWDCSProject
 This project is developed in playwright using javascript
 
-Steps to clone and run tests:
+> Steps to clone and run tests:
 
-Install Visual Studio Code on the windows/IOS machine
+1. Install Visual Studio Code on the windows/IOS machine
 
-Clone the git repository from - https://github.com/pratyushamay17/DCSPlaywright.git
+2. Clone the git repository from - https://github.com/pratyushamay17/DCSPlaywright.git
 
-Install playwright using command - npm init playwright@latest
+3. Install playwright using command - npm init playwright@latest
 
-Follow the instructions when prompted
+4. Follow the instructions when prompted
 
-Do you want to use TypeScript or JavaScript? · TypeScript
+			Do you want to use TypeScript or JavaScript? · TypeScript
+			Where to put your end-to-end tests? · tests
+			Add a GitHub Actions workflow? (Y/n) · true
+			Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
 
-Where to put your end-to-end tests? · tests
+     Playwright will be installed successfully
 
-Add a GitHub Actions workflow? (Y/n) · true
+5. Inside that directory, you can run several commands:
 
-Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
+Runs the end-to-end tests. 
+  		>	npx playwright test
 
-Playwright will be installed successfully
-
-Inside that directory, you can run several commands:
-
-  npx playwright test
-    > Runs the end-to-end tests.
-
-  npx playwright test --ui
-    > Starts the interactive UI mode.
-
-  npx playwright test --project=chromium
-    > Runs the tests only on Desktop Chrome.
-
-  npx playwright test --debug
-    > Runs the tests in debug mode.
-
-  npx playwright codegen
-    > Auto generate tests with Codegen.
-
-  npx playwright test testfile.spec.js
-    > Runs the tests from specific file
-
+Starts the interactive UI mode.
+			> npx playwright test --ui
+  		
+Runs the tests only on Desktop Chrome.
+		>	npx playwright test --project=chromium
+  		
+Runs the tests in debug mode.
+		>	npx playwright test --debug
+  		
+Auto generate tests with Codegen.
+		>	npx playwright codegen
+  		
+Runs the tests from specific file
+		>	npx playwright test testfile.spec.js
 
