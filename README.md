@@ -1,40 +1,22 @@
-# NSWDCSProject
-This project is developed in playwright using javascript
+# DCS Playwright BDD
 
-> Steps to clone and run tests:
+BDD tests using Cucumber + Playwright + TypeScript.
 
-1. Install Visual Studio Code on the windows/IOS machine
+## Prerequisites
+- Node.js (v16+ recommended; project was run with Node v22)
+- npm (or use npx)
+- Windows (commands below assume CMD / PowerShell)
 
-2. Clone the git repository from - https://github.com/pratyushamay17/DCSPlaywright.git
+## Install
+From project root:
 
-3. Install playwright using command - npm init playwright@latest
+ ` npm install`
 
-4. Follow the instructions when prompted
+## Run BDD tests 
+` npm run bdd`
 
-			Do you want to use TypeScript or JavaScript? · TypeScript
-			Where to put your end-to-end tests? · tests
-			Add a GitHub Actions workflow? (Y/n) · true
-			Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
+## Run single feature file 
+` npx cucumber-js "tests/features/VehicleRegistrationCalculation.feature" -r ts-node/register --require tests/config/**/*.ts --require tests/support/**/*.ts --require tests/page-objects/**/*.ts --require tests/steps/**/*.ts`
 
-     Playwright will be installed successfully
-
-5. Inside that directory, you can run several commands:
-
-Runs the end-to-end tests. 
-  		>	npx playwright test
-
-Starts the interactive UI mode.
-			> npx playwright test --ui
-  		
-Runs the tests only on Desktop Chrome.
-		>	npx playwright test --project=chromium
-  		
-Runs the tests in debug mode.
-		>	npx playwright test --debug
-  		
-Auto generate tests with Codegen.
-		>	npx playwright codegen
-  		
-Runs the tests from specific file
-		>	npx playwright test testfile.spec.js
-
+## Run all Playwright tests
+`npm run playwright:test`
