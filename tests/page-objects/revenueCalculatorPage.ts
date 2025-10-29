@@ -1,5 +1,6 @@
-import { expect, Page } from "@playwright/test";
-import { config } from "../config/config";
+import { expect } from "@playwright/test";
+import type { Page } from "playwright";
+import { Config } from '../config/config.ts';
 
 export class RevenueCalculatorPage {
 
@@ -27,7 +28,7 @@ export class RevenueCalculatorPage {
 
     async clickCalculateButton()
     {
-        await this.page.getByRole('button', { name: 'Calculate' }).click();
+        await this.page.getByRole('button', { name: 'Calculate' }).click({ timeout: 10_000 });
     }
 
     async verifycalculatorModalHeader()

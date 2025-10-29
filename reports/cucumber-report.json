@@ -1,0 +1,114 @@
+[
+  {
+    "description": "  As a user\n  I want to calculate vehicle registration amount\n  So that I can know the duty payable based on my purchase price",
+    "elements": [
+      {
+        "description": "",
+        "id": "vehicle-registration-calculation;verify-vehicle-registration-calculation",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Verify vehicle registration calculation",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the homepage",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I click on the \"Check Online\" button",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should be navigated to the Revenue Calculator page",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I should see the Revenue Calculator page header",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I select the Registration radio button",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I enter the purchase price \"config.purchase_price\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click on the \"Calculate\" button",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see the calculator modal header",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I should see the registration amount details showing duty payable \"config.duty_payable\" for purchase price \"config.purchase_price\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "vehicle-registration-calculation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Vehicle Registration Calculation",
+    "tags": [],
+    "uri": "tests\\features\\VehicleRegistrationCalculation.feature"
+  }
+]

@@ -1,5 +1,5 @@
-import { Page } from "@playwright/test";
-import { config } from "../config/config";
+import type { Page } from "playwright";
+import { Config } from "../config/config.ts";
 
 export class HomePage  {
    
@@ -11,12 +11,12 @@ export class HomePage  {
     
     async navigateToHomepage()
     {
-        await this.page.goto(config.baseUrl);
+        await this.page.goto(Config.baseUrl);
     }
 
-    async clickCheckOnlineButton()
-    {
-        await this.page.getByRole('button', { name: 'Check online' }).click();
+    async clickCheckOnlineButton() {
+        // override to 10s for this click
+        await this.page.getByRole('button', { name: 'Check online' }).click({ timeout: 10_000 });
     }
 
 }
